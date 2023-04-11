@@ -19,7 +19,7 @@ public class WaterTnk {
 
 			} else
 
-			if (tankCapacity == 100) {
+			if (tankCapacity < 100) {
 				System.out.println("Tank filled");
 			}
 		}

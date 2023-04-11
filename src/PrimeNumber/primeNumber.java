@@ -5,17 +5,17 @@ import java.util.Scanner;
 public class primeNumber {
 
 	void prime() {
-		int temp;
+		int number;
 		boolean isPrime=true;
 		@SuppressWarnings("resource")
 		Scanner scan= new Scanner(System.in);
-		System.out.println("Enter any number:");
+		System.out.println("Enter a positive number:");
 		//capture the input in an integer
 		int num=scan.nextInt();
 		for(int i=2;i<=num/2;i++)
 		{
-	           temp=num%i;
-		   if(temp==0)
+	           number=num%i;
+		   if(number==0)
 		   {
 		      isPrime=false;
 		      break;
