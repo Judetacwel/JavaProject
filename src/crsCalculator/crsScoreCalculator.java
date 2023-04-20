@@ -47,6 +47,9 @@ public class CrsScoreCalculator {
 		case "longer Degree ":
 			educationPoints = 21;
 			break;
+		default:
+			System.out.println("Wrong input");
+			break;
 		}
 
 	}

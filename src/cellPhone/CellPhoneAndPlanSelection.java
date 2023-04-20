@@ -45,6 +45,7 @@ public class CellPhoneAndPlanSelection {
 			break;
 		default:
 			System.out.println("Please Enter correct input");
+			break;
 
 		}
 	}
@@ -72,6 +73,7 @@ public class CellPhoneAndPlanSelection {
 			phoneAmount = 20;
 		default:
 			System.out.println("Please Enter correct input");
+			break;
 		}
 
 	}
@@ -95,6 +97,7 @@ public class CellPhoneAndPlanSelection {
 			break;
 		default:
 			System.out.println("Please Enter correct input");
+			break;
 
 		}
 	}
