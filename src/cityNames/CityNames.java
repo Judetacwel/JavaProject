@@ -30,16 +30,14 @@ public class CityNames {
 	}
 
 	void extractWords() {
-		
+
 		String str = "100 queen street,Toronto,M5V 3E3 ";
 
-		String splitednames[]=str.split(",");
+		String splitednames[] = str.split(",");
 
-		
-		for(int i=0;i<3;i++) {
-			
+		for (int i = 0; i < 3; i++) {
+
 			System.out.println(splitednames[i]);
-
 
 		}
 	}
