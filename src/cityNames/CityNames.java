@@ -18,7 +18,7 @@ public class CityNames {
 
 	void endsWithGivenChar(String givenChar) {
 
-		String[] lastNameArray = new String[nameOfCities.length];
+		String[] lastNameArray = new String[matchFound.length()];
 		for (int i = 0; i < nameOfCities.length; i++) {
 			if (nameOfCities[i].endsWith(givenChar)) {
 				lastNameArray[i] = nameOfCities[i];

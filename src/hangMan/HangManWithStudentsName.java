@@ -1,12 +1,10 @@
 package hangMan;
 
-import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
 public class HangManWithStudentsName {
 	
-	Random ra =new Random();
 	String[] studentNames= {"Aleena","Angel","Asha","Clemin","Gopesh","Hamneet","Jimna","Jobin","Jude","Kamaldeep","Manpreetk","Manpreets","Mariya","Namitha","Neelam","Nisha","Parminder","Rajat","Rojy","Sojan","Suchithra","Vindhuja"};
 	char nameindex;
 	String selectedName;
@@ -20,6 +18,7 @@ public class HangManWithStudentsName {
 	
 	void randumNames() {
 	
+		Random ra =new Random();
 		int selectedNumber = ra.nextInt(studentNames.length);
 		
 		 selectedName=studentNames[selectedNumber];		 
