@@ -6,13 +6,33 @@ public class PersonalAccountDetails {
 
 	public String nameOfPerson;
 
-	private int balance = 1000;
+	private double balance;
 
-	private int pinNumber = 1234;
+	private int pinNumber;
 
-	private String onlineBankingPassword = "Password@123";
+	private String onlineBankingPassword;
 
-	int getBalance() {
+	public PersonalAccountDetails(int accountNumber, String nameOfPerson, double balance, int pinNumber,
+			String onlineBankingPassword) {
+		this.accountNumber = accountNumber;
+		this.nameOfPerson = nameOfPerson;
+		this.balance = balance;
+		this.pinNumber = pinNumber;
+		this.onlineBankingPassword = onlineBankingPassword;
+	}
+
+	public PersonalAccountDetails() {
+		// TODO Auto-generated constructor stub
+		
+	}
+	
+	String getName() {
+		
+		return nameOfPerson;
+	}
+	
+
+	double getBalance() {
 		return balance;
 	}
 
@@ -22,6 +42,24 @@ public class PersonalAccountDetails {
 
 	String getOnlinePassword() {
 		return onlineBankingPassword;
+	}
+
+	int setPin(int pin) {
+
+		this.pinNumber = pin;
+		return pinNumber;
+
+	}
+
+	void setPassword(String Password) {
+
+		this.onlineBankingPassword = Password;
+
+	}
+	
+	void setBalance(double balance) {
+		
+		this.balance=balance;
 	}
 
 }

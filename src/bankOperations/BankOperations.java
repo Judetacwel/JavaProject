@@ -2,52 +2,47 @@ package bankOperations;
 
 import java.util.Scanner;
 
-public class BankOperations {
+public abstract class BankOperations {
 
 	Scanner sc = new Scanner(System.in);
-	PersonalAccountDetails accountDetails = new PersonalAccountDetails();
 
-	int accountBalance = accountDetails.getBalance();
+	void withDraw(PersonalAccountDetails account) {
+		 account.getBalance();
+	}
 
-	void withDraw() {
-		System.out.println("Enter the amount to withdraw :");
-		int withDrawAmount = sc.nextInt();
-		if (accountBalance > withDrawAmount) {
+	void deposit(PersonalAccountDetails account) {
+		account.getBalance();
+	}
 
-			accountBalance -= withDrawAmount;
-			System.out.println("you have withdrawed " + withDrawAmount);
+	void viewBalance(PersonalAccountDetails account) {
 
-		} else {
-			System.out.println("Not enough bakance!!!");
-		}
+		System.out.println(account.getBalance()); 
+	}
 
-		System.out.println("Do you want to see your current balance : yes/no ?");
-		String userInput = sc.next();
-		if (userInput.equals("Yes")) {
-			viewBalance();
-		}
+	public abstract void changePinPassword(PersonalAccountDetails account);
+
+	public void addNames() {
 
 	}
 
-	void deposit() {
+	public String selectUser(PersonalAccountDetails[] nameList) {
+		int i;
+		System.out.println("Enter your Name : ");
+		String enteredUserName = sc.next();
 
-		System.out.println("Enter the amount to be deposited :");
-		int amountDepostied = sc.nextInt();
-		accountBalance += amountDepostied;
-		System.out.println("You have deposited " + amountDepostied);
+		String selectedUserName = null;
 
-		System.out.println("Do you want to see your current balance : yes/no ?");
-		String userInput = sc.next();
-		if (userInput.equals("Yes")) {
-			viewBalance();
+		for ( i = 0; i < nameList.length; i++) {
+			if (nameList[i].getName().equals(enteredUserName)) {
+
+				selectedUserName = nameList[i].getName();
+				break;
+			}
+
 		}
+		return selectedUserName;
 
 	}
 
-	void viewBalance() {
-
-		System.out.println("your current balance is " + accountBalance);
-
-	}
-
+	
 }
